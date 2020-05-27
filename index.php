@@ -1,3 +1,10 @@
+<?php
+    require_once('./classes/Unit.php');
+    require_once('./classes/Plane.php');
+    require_once('./classes/Soldier.php');
+    require_once('./classes/Bomber.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,16 +30,38 @@
         }
         
     </style>
-    <div class="text-right container my-4" id="headline">
-        <div id="headline">
+    <div class="container my-4" id="headline">
+        <div id="headline text-right">
             <div class="display-4">The only thing we have to fear is fear itself</div>
             <h2 class="text-muted">D.Roselvelt</h2>
         </div>
         
-        <h6>Logs</h6>
-        <div id="display">
+        <h6 class="mt-5">Logs</h6>
+        <div id="display" class="border p-5">
             <?php
-            
+
+
+                /* !! ZOMBIE CODE ALERT !! */
+
+
+                //create a soldier;
+                $soldier1 = new Soldier();
+
+                //soldier life
+                // var_dump( "initaial life:" . $soldier1->getLife() );
+
+                //attack soldier
+                $soldier1->attack(10);
+
+                //soldier life
+            // var_dump( "life after attack:" . $soldier1->getLife() );
+
+                //$plane1 = new Plane();
+                //plane life
+                //var_dump($plane1);
+
+                $bomber1 = new Bomber();
+                var_dump($bomber1);
             ?>
         </div>
     </div>
