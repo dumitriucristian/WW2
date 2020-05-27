@@ -3,6 +3,8 @@
     require_once('./classes/Plane.php');
     require_once('./classes/Soldier.php');
     require_once('./classes/Bomber.php');
+    require_once('./classes/Tank.php');
+    require_once('./classes/Panzer.php');
 ?>
 
 <!DOCTYPE html>
@@ -60,8 +62,12 @@
                 //plane life
                 //var_dump($plane1);
 
-                $bomber1 = new Bomber();
-                var_dump($bomber1);
+                // $bomber1 = new Bomber();
+
+                // $tank = new Tank();
+
+                $panzer = new Panzer();
+                var_dump($panzer);
             ?>
         </div>
     </div>
