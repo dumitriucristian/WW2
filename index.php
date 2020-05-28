@@ -1,10 +1,6 @@
 <?php
 
-   // require_once('./interfaces/Unit.php');
-    require_once('./classes/Unit.php');
-    require_once('./classes/Plane.php');
-    require_once('./classes/Soldier.php');
-    require_once('./classes/Bomber.php');
+   require_once 'autoloader/autoloader.php';
 
 
     echo "<h2>The only thing we have to fear is fear itself - D.Roselvelt</h2>";
