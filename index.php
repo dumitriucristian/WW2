@@ -44,6 +44,7 @@
 
 
                 /* !! ZOMBIE CODE ALERT !! */
+   require_once 'autoloader/autoloader.php';
 
 
                 //create a soldier;
