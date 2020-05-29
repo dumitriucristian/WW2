@@ -11,9 +11,10 @@ class Plane extends  Unit
         $this->attackType = "plane";
     }
 
-    public function setAttackPower($enemyType)
+    //DAMAGE EFFICENCY AGAINST CERTAIN TYPE OF UNITS
+    protected function setAttackEfficency($enemyAttackType)
     {
-        switch ($enemyType) {
+        switch ($enemyAttackType) {
             case "soldier":
                 $efficiency = 0.1;
                 break;
@@ -27,7 +28,7 @@ class Plane extends  Unit
                 $efficiency = 1;
         }
 
-        return $this->attackPower * $efficiency;
+        return $efficiency;
     }
 
 }

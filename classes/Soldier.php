@@ -10,9 +10,10 @@ class Soldier extends Unit
         $this->attackPower = 5;
     }
 
-    public function setAttack($enemyType)
+    //DAMAGE EFFICENCY AGAINST CERTAIN TYPE OF UNITS
+    protected function setAttackEfficency($enemyAttackType)
     {
-        switch ($enemyType) {
+        switch ($enemyAttackType) {
             case "soldier":
                 $efficiency = 1;
                 break;
@@ -26,7 +27,7 @@ class Soldier extends Unit
                 $efficiency = 1;
         }
 
-        return $this->attackPower * $efficiency;
+        return $efficiency;
     }
 
 

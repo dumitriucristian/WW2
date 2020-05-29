@@ -23,20 +23,29 @@ abstract class Unit
         return $this->attackPower;
     }
 
-    public function defense($enemyAttack)
+    public function setLifeAfterAttack($enemyAttack)
     {
         $lifeValue = $this->life - $enemyAttack;
         $this->setLife($lifeValue);
     }
 
+    //A FRIENDLY UNIT ATACKS AN ENEMY UNIT
     public function attack($target)
     {
 
-         $target->defense($this->attackPower);
+        $target->setLifeAfterAttack($this->getDamageInflictedToEnemy($target->attackType));
     }
 
 
+    //DAMAGE INFLICTED TO THE ENEMY WHEN THE FRIENDLY UNIT ATTACKS OR THE FRIENDLY UNIT IS ATTACKED
+    private function getDamageInflictedToEnemy($enemyAttackType)
+    {
+        
+        return $this->attackPower * $this->setAttackEfficency($enemyAttackType);
+    }
 
+
+    abstract protected function setAttackEfficency($enemyAttackType);
 
 
 
