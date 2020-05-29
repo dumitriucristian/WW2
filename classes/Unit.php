@@ -27,4 +27,6 @@ abstract class Unit
         $lifeValue = $this->life - $enemyAttack;
         $this->setLife($lifeValue);
     }
+
+
 }
