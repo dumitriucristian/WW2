@@ -8,6 +8,7 @@ class Soldier extends Unit
     {
         $this->life = 25;
         $this->attackPower = 5;
+        $this->attackType = "soldier";
     }
 
     //DAMAGE EFFICENCY AGAINST CERTAIN TYPE OF UNITS
