@@ -4,7 +4,7 @@
     require_once('./classes/Soldier.php');
     require_once('./classes/Bomber.php');
     require_once('./classes/Tank.php');
-    require_once('./classes/Panzer.php');
+    require_once('./classes/lightTank.php');
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +66,7 @@
 
                 // $tank = new Tank();
 
-                $panzer = new Panzer();
+                $lightTank = new lightTank();
                 var_dump($panzer);
             ?>
         </div>
