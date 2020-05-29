@@ -6,7 +6,7 @@ And can travel different nr of squares
 When two oposite units met several casualties are done      
 Then the user who loose all his troops loose the game.      
 
-##Move
+##Move 
 Given there are different types of landscape    
 when units move through plain field 
 Then has 100% moving capacity   
