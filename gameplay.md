@@ -1,4 +1,4 @@
-## Maps
+## Maps       
 Given we have a map  of 100 x 100 squares       
 And units that can move different nr of squares      
 And each unit have different attack power       
@@ -6,7 +6,7 @@ And can travel different nr of squares
 When two oposite units met several casualties are done      
 Then the user who loose all his troops loose the game.      
 
-##Move
+##Move              
 Given there are different types of landscape    
 when units move through plain field 
 Then has 100% moving capacity   
@@ -19,7 +19,7 @@ Given there are different types of landscape
 When units move through mountaignes 
 Then has 20% moving capacity    
 
-##Attack
+##Attack    
 Given differrent type of efficiency in combat   
 When unit of the same type attack   
 Then Unit of the same type have 100% efficiency attack  
@@ -32,7 +32,7 @@ Given differrent type of efficiency in combat
 When soldier attack Plane   
 Then is 1% efficiency   
 
-##Range Attack
+##Range Attack    
 Given each unit type has different capabilities 
 And  Soldier has 1 square fire power    
 And Tank has 3 squre fire power 
