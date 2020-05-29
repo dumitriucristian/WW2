@@ -7,4 +7,4 @@ Delete a local branch that has been merged
 ``git branch -d <branch_name>``
 
 Remove a remote branch from the server  
-``git push origin --delete <remote branch name>``
+``git push origin --delete <remote branch name>`` 
