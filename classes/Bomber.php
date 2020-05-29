@@ -7,6 +7,7 @@ class Bomber extends Plane
     {
         $this->life = 80;
         $this->attackPower = 30;
+        $this->unitType = 'Plane';
     }
 
 }

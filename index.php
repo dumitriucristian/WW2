@@ -5,33 +5,33 @@
 
     echo "<h2>The only thing we have to fear is fear itself - D.Roselvelt</h2>";
 
+    $Bomber1 = new Bomber();
+    $Bomber2 = new Bomber();
+    $Plane1 = new Plane();
+    $Plane2 = new Plane();
+    $Soldier1 = new Soldier();    
+    $Soldier2 = new Soldier();
 
-    //create a soldier;
-    $soldier1 = new Soldier();
-    $soldier2 = new Soldier();
-    $plane1 = new Plane();
+    $Bomber1->attack($Plane1);
+    var_dump($Plane1);
+    echo "<br>";
 
-    //soldier life
-    // var_dump( "initaial life:" . $soldier1->getLife() );
+    $Bomber1->attack($Soldier1);
+    var_dump($Soldier1);
+    echo "<br>";
 
-    //attack soldier
-  //  $soldier1->attack(10);
+    $Plane1->attack($Bomber1);
+    var_dump($Bomber1);
+    echo "<br>";
 
-    //soldier life
-   // var_dump( "life after attack:" . $soldier1->getLife() );
+    $Plane1->attack($Soldier2);
+    var_dump($Soldier2);
+    echo "<br>";
 
-    //$plane1 = new Plane();
-    //plane life
-    //var_dump($plane1);
+    $Soldier2->attack($Plane2);
+    var_dump($Plane2);
+    echo "<br>";
 
-   // $bomber1 = new Bomber();
-    //var_dump($bomber1);
-
-   // $attack = $soldier1->setAttack("soldier");
-     $soldier2->attack($plane1);
-    var_dump($plane1);
- //   $soldier2->defense( $soldier1->setAttack("soldier"));
-  //  var_dump($soldier2);
-    //plane attack soldier
-   // $soldier1->defense($plane1->setAttack("soldier"));
-   // var_dump($soldier1);
+    $Soldier2->attack($Bomber2);
+    var_dump($Bomber2);
+    echo "<br>";

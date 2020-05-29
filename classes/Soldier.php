@@ -8,6 +8,7 @@ class Soldier extends Unit
     {
         $this->life = 25;
         $this->attackPower = 5;
+        $this->unitType = 'Soldier';
     }
 
     public function setAttack($enemyType)

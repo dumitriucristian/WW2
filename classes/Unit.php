@@ -5,7 +5,7 @@ abstract class Unit
 {
     protected $life;
     protected $attackPower;
-    protected $attackType;
+    protected $unitType;
 
 
     public function getLife()
@@ -23,17 +23,21 @@ abstract class Unit
         return $this->attackPower;
     }
 
-    public function getAttackEfficiency($target){
-        if(get_class($this) === get_class($target) || get_class($this) != 'Soldier')
-            return 1;
-        $attackerClass = get_class($this);
-        $targetClass = get_class($target);
+    public function defense($enemyAttack)
+    {
+        $lifeValue = $this->life - $enemyAttack;
+        $this->setLife($lifeValue);
+    }
+
+    private function getAttackEfficiency($target){
+        if( $this->unitType == $target->unitType || 
+            $this->unitType != 'Soldier')   return 1;
 
         switch (true) {
-            case ($attackerClass == 'Soldier' and $targetClass == 'Plane'):
+            case ($this->unitType == 'Soldier' and $target->unitType == 'Plane'):
                 return .1;
                 break;
-            case ($attackerClass == 'Soldier' and $targetClass == 'Tank');
+            case ($this->unitType == 'Soldier' and $target->unitType == 'Tank');
                 return .5;
                 break;
             default:
@@ -41,12 +45,6 @@ abstract class Unit
         }
 
         return;
-    }
-
-    public function defense($enemyAttack)
-    {
-        $lifeValue = $this->life - $enemyAttack;
-        $this->setLife($lifeValue);
     }
 
     public function attack($target)
