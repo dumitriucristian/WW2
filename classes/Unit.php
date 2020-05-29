@@ -5,12 +5,13 @@ abstract class Unit
 {
     protected $life;
     protected $attackPower;
+    protected $attackType;
+
 
     public function getLife()
     {
         return $this->life;
     }
-
 
     protected function setLife( $lifeValue )
     {
@@ -22,9 +23,21 @@ abstract class Unit
         return $this->attackPower;
     }
 
-    public function attack($enemyAttack)
+    public function defense($enemyAttack)
     {
         $lifeValue = $this->life - $enemyAttack;
         $this->setLife($lifeValue);
     }
+
+    public function attack($target)
+    {
+
+         $target->defense($this->attackPower);
+    }
+
+
+
+
+
+
 }
