@@ -6,5 +6,5 @@ Delete a local branch that has not been merged
 Delete a local branch that has been merged  
 ``git branch -d <branch_name>``
 
-Remove a remote branch from the server  
+Remove a remote branch from the server  - if u use this all pull request will be deleted 
 ``git push origin --delete <remote branch name>`` 
