@@ -6,33 +6,21 @@ class Soldier extends Unit
 
     public function __construct()
     {
+        parent::__construct();
         $this->life = 25;
         $this->attackPower = 5;
     }
 
-    public function setAttack($enemyType)
+    public function setAttackEfficiency()
     {
-        switch ($enemyType) {
-            case "soldier":
-                $efficiency = 1;
-                break;
-            case "tank":
-                $efficiency = 0.5;
-                break;
-            case "plane":
-                $efficiency = 0.1 ;
-                break;
-            default:
-                $efficiency = 1;
-        }
+        $efficiency = [
+            "soldier" => 1,
+            "tank"  => 0.5,
+            "plane" => 0.1
+        ];
 
-        return $this->attackPower * $efficiency;
+         $this->attackEffiency = $efficiency;
     }
-
-
-
-
-
 
 
 }

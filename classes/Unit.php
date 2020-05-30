@@ -4,9 +4,14 @@
 abstract class Unit
 {
     protected $life;
-    protected $attackPower;
-    protected $attackType;
+    public $attackPower;
+    public $attackEfficiency;
 
+    public function __construct()
+    {
+        $this->attackEfficency = $this->setAttackEfficiency();
+        $this->attackPower = $this->getAttackPower();
+    }
 
     public function getLife()
     {
@@ -18,22 +23,26 @@ abstract class Unit
         $this->life = $lifeValue;
     }
 
-    public function getAttackPower()
+    private function getAttackPower()
     {
         return $this->attackPower;
     }
 
-    public function defense($enemyAttack)
+    public function getAttackEfficiency()
     {
-        $lifeValue = $this->life - $enemyAttack;
-        $this->setLife($lifeValue);
+        return $this->attackEfficiency;
     }
 
-    public function attack($target)
+    public function receiveAttack( $attackStrength )
     {
-
-         $target->defense($this->attackPower);
+        $this->setLife($this->life - $attackStrength );
     }
+
+
+
+
+
+
 
 
 
