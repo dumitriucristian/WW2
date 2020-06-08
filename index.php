@@ -22,5 +22,21 @@
     //plane life
     //var_dump($plane1);
 
+
     $bomber1 = new Bomber();
     var_dump($bomber1);
+
+   // $bomber1 = new Bomber();
+    //var_dump($bomber1);
+
+   // $attack = $soldier1->setAttack("soldier");
+      $attack = new Attack($plane1, $soldier1);
+
+    var_dump($plane1);
+    var_dump($soldier1);
+ //   $soldier2->defense( $soldier1->setAttack("soldier"));
+  //  var_dump($soldier2);
+    //plane attack soldier
+   // $soldier1->defense($plane1->setAttack("soldier"));
+   // var_dump($soldier1);
+
