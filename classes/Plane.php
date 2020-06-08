@@ -8,7 +8,7 @@ class Plane extends  Unit
     {
         $this->life = 50;
         $this->attackPower = 15;
-        $this->attackType = "plane";
+        $this->unitType = 'Plane';
     }
 
     public function setAttackPower($enemyType)
