@@ -3,12 +3,12 @@
 
 class Plane extends  Unit
 {
-
     public function __construct()
     {
         parent::__construct();
         $this->life = 50;
         $this->attackPower = 15;
+
     }
 
     public function setAttackEfficiency()
@@ -20,6 +20,7 @@ class Plane extends  Unit
         ];
 
         $this->attackEfficiency = $efficiency;
+
     }
 
 }

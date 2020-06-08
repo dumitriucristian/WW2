@@ -11,6 +11,7 @@ class Soldier extends Unit
         $this->attackPower = 5;
     }
 
+
     public function setAttackEfficiency()
     {
         $efficiency = [
@@ -21,6 +22,4 @@ class Soldier extends Unit
 
          $this->attackEffiency = $efficiency;
     }
-
-
 }

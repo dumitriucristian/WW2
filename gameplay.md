@@ -26,11 +26,11 @@ Then Unit of the same type have 100% efficiency attack
 
 Given differrent type of efficiency in combat   
 When soldier attack Tank    
-Then is 50% efficiency  
+Then is 10% efficiency  
 
 Given differrent type of efficiency in combat   
 When soldier attack Plane   
-Then is 10% efficiency   
+Then is 1% efficiency   
 
 ##Range Attack    
 Given each unit type has different capabilities 

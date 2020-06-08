@@ -13,10 +13,12 @@ abstract class Unit
         $this->attackPower = $this->getAttackPower();
     }
 
+
     public function getLife()
     {
         return $this->life;
     }
+
 
     protected function setLife( $lifeValue )
     {
@@ -28,25 +30,15 @@ abstract class Unit
         return $this->attackPower;
     }
 
+    public function attack($enemyAttack)
+
     public function getAttackEfficiency()
     {
         return $this->attackEfficiency;
     }
-
+  
     public function receiveAttack( $attackStrength )
     {
         $this->setLife($this->life - $attackStrength );
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -6,4 +6,3 @@ any type of unit should have following properties:
 - moves
 
 
- 
